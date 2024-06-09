@@ -1,21 +1,54 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+#define DEFAULT 0
+#define LOWER   1
+#define RAISE   2
+
+#define L_F &mt LSHIFT F
+#define L_D &mt LCTRL D
+#define L_S &mt LALT S
+#define L_A &mt LEFT_COMMAND A
+
+#define R_J &mt LSHIFT J
+#define R_K &mt RCTRL K
+#define R_L &mt RALT L
+#define R_SEMI &mt RIGHT_COMMAND SEMI
+
 / {
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// |   ESC   |    Q    |    W    |    E    |    R    |    T    |                                          |    Y    |    U    |    I    |    O    |    P    |    \    |
-// |   TAB   |    A    |    S    |    D    |    F    |    G    |                                          |    H    |    J    |    K    |    L    |    ;    |    '    |
-// |  SHIFT  |    Z    |    X    |    C    |    V    |    B    | CTRL+A  | CTRL+C  |  |  CTRL+V |  CTRL+X |    N    |    M    |    ,    |    .    |    /    |  R CTRL |
-//                               |   GUI   |   DEL   | RETURN  |  SPACE  | ESCAPE  |  |  RETURN |  SPACE  |   TAB   |   BSPC  |  R ALT  |		
+// |		 |         |    W    |    E    |    R    |    T    |		|    Y    |    U    |    I    |    O    |         |         |
+// |   ESC   |    Q    |    S    |    D    |    F    |    G    |		|    H    |    J    |    K    |    L    |    P    |    [    |
+// |    '    |    A    |    X    |    C    |    V    |    B    | 		|    N    |    M    |    ,    |    .    |    ;    |    ]    |
+// |		 |    Z    |         |  SPACE  |   TAB   |    lup  | 		|    lup  |   BSPC  |  RETURN |         |    /    |			|
+
             bindings = <
-						&kp W	&kp E		&kp R	&kp T	&kp Y	&kp U		&kp I		&kp O
-    &kp ESC		&kp Q	&kp S	&kp D		&kp F	&kp G	&kp H	&kp J		&kp K		&kp L		&kp P		&kp LBKT
-    &kp SQT		&kp A	&kp X	&kp C		&kp V	&kp B	&kp N	&kp M		&kp COMMA	&kp DOT		&kp SEMI	&kp RBKT
-				&kp Z			&kp SPACE	&kp TAB	&kp B	&kp B	&kp BSPC	&kp RETURN				&kp FSLH
+						&kp W		&kp E		&kp R	&kp T				&kp Y	&kp U		&kp I		&kp O
+    &kp ESC		&kp Q	&kp L_S		&kp L_D		&kp L_F	&kp G				&kp H	&kp R_J		&kp R_K		&kp R_L		&kp P		&kp LBKT
+    &kp SQT		&kp L_A	&kp X		&kp C		&kp V	&kp B				&kp N	&kp M		&kp COMMA	&kp DOT		&kp R_SEMI	&kp RBKT
+				&kp Z				&kp SPACE	&kp TAB	&mo 1				&to 2	&kp BSPC	&kp RETURN				&kp FSLH
+            >;
+        };
+		
+		lower_layer {
+            bindings = <
+							&kp N2		&kp N3		&kp N4		&kp N5				&kp N6		&kp N7		&kp N8		&kp N9
+    &kp TILDE 	&kp N1		&kp AT 		&kp HASH 	&kp DLLR	&kp PRCNT 			&kp CARET	&kp AMPS 	&kp ASTRK 	&kp LPAR 	&kp N0		&kp LBRC
+    &kp DQT		&kp EXCL	&kp PIPE 	&none		&kp MINUS 	&kp PLUS 			&kp UNDER 	&kp EQUAL 	&kp COMMA	&kp DOT		&kp RPAR 	&kp RBRC
+				&kp BSLH 				&kp SPACE	&kp TAB		&to 0				&to 2		&kp BSPC	&kp RETURN				&kp QMARK 
+            >;
+        };
+		
+        raise_layer {
+            bindings = <
+							&kp F2		&kp F3		&kp F4		&kp F5				&kp F6	&kp F7		&kp F8		&kp F9
+    &kp ESC		&kp F1		&kp LALT	&kp LCTRL	&kp LSHIFT	&none				&none	&kp LEFT	&kp UP		&kp RIGHT	&kp F10			&none
+    &kp DEL 	&kp K_REDO	&kp K_CUT 	&kp K_COPY 	&kp K_PASTE	&none				&none	&kp HOME 	&kp DOWN	&kp END 	&kp K_VOL_UP 	&none
+				&kp K_UNDO 				&kp SPACE	&kp TAB		&to 0				&to 1	&kp BSPC	&kp RETURN				&kp K_VOL_DN 
             >;
         };
     };
