@@ -51,8 +51,8 @@
             bindings = <
 							&kp F2		&kp F3		&kp F4		&kp F5				&kp F6	&kp F7		&kp F8		&kp F9
     &kp ESC		&kp F1		&kp LALT	&kp LCTRL	&kp LSHIFT	&none				&none	&kp LEFT	&kp UP		&kp RIGHT	&kp F10			&none
-    &kp DEL 	&kp K_REDO	&kp K_CUT 	&kp K_COPY 	&kp K_PASTE	&none				&none	&kp HOME 	&kp DOWN	&kp END 	&kp K_VOL_UP 	&none
-				&kp K_UNDO 				&kp SPACE	&kp TAB		&to 0				&to 1	&kp BSPC	&kp RETURN				&kp K_VOL_DN
+    &kp DEL 	&kp LC(Y)	&kp LC(X) 	&kp LC(C) 	&kp LC(V)	&none				&none	&kp HOME 	&kp DOWN	&kp END 	&kp K_VOL_UP 	&none
+				&kp LC(Z) 				&kp SPACE	&kp TAB		&to 0				&to 1	&kp BSPC	&kp RETURN				&kp K_VOL_DN
             >;
         };
     };
