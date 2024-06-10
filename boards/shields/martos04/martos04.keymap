@@ -15,6 +15,10 @@
 #define R_L &mt RALT L
 #define R_SEMI &mt RIGHT_COMMAND SEMI
 
+&mt {
+    tapping-term-ms = <400>;
+};
+
 / {
     keymap {
         compatible = "zmk,keymap";
