@@ -5,18 +5,18 @@
 #define LOWER   1
 #define RAISE   2
 
-#define L_F &mt LSHIFT F
-#define L_D &mt LCTRL D
-#define L_S &mt LALT S
-#define L_A &mt LEFT_COMMAND A
+#define L_F &ht_tp LSHIFT F
+#define L_D &ht_tp LCTRL D
+#define L_S &ht_tp LALT S
+#define L_A &ht_tp LEFT_COMMAND A
 
-#define R_J &mt LSHIFT J
-#define R_K &mt RCTRL K
-#define R_L &mt RALT L
-#define R_SEMI &mt RIGHT_COMMAND SEMI
+#define R_J &ht_tp LSHIFT J
+#define R_K &ht_tp RCTRL K
+#define R_L &ht_tp RALT L
+#define R_SEMI &ht_tp RIGHT_COMMAND SEMI
 
 &mt {
-    tapping-term-ms = <400>;
+    tapping-term-ms = <300>;
 };
 
 / {
