@@ -33,5 +33,23 @@
 				&kp Z				&kp SPACE	&kp TAB	&mo 1				&to 2	&kp BSPC	&kp RETURN				&kp FSLH
             >;
         };
+
+		lower_layer {
+            bindings = <
+							&kp N2		&kp N3		&kp N4		&kp N5				&kp N6		&kp N7		&kp N8		&kp N9
+    &kp TILDE 	&kp N1		&kp AT 		&kp HASH 	&kp DLLR	&kp PRCNT 			&kp CARET	&kp AMPS 	&kp ASTRK 	&kp LPAR 	&kp N0		&kp LBRC
+    &kp DQT		&kp EXCL	&kp PIPE 	&none		&kp MINUS 	&kp PLUS 			&kp UNDER 	&kp EQUAL 	&kp COMMA	&kp DOT		&kp RPAR 	&kp RBRC
+				&kp BSLH 				&kp SPACE	&kp TAB		&to 0				&to 2		&kp BSPC	&kp RETURN				&kp QMARK
+            >;
+        };
+
+        raise_layer {
+            bindings = <
+							&kp F2		&kp F3		&kp F4		&kp F5				&kp F6	&kp F7		&kp F8		&kp F9
+    &kp ESC		&kp F1		&kp LALT	&kp LCTRL	&kp LSHIFT	&none				&none	&kp LEFT	&kp UP		&kp RIGHT	&kp F10			&none
+    &kp DEL 	&kp K_REDO	&kp K_CUT 	&kp K_COPY 	&kp K_PASTE	&none				&none	&kp HOME 	&kp DOWN	&kp END 	&kp K_VOL_UP 	&none
+				&kp K_UNDO 				&kp SPACE	&kp TAB		&to 0				&to 1	&kp BSPC	&kp RETURN				&kp K_VOL_DN
+            >;
+        };
     };
 };
