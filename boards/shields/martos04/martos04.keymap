@@ -15,9 +15,6 @@
 #define R_L &ht_tp RALT L
 #define R_SEMI &ht_tp RIGHT_COMMAND SEMI
 
-&mt {
-    tapping-term-ms = <300>;
-};
 
 / {
     behaviors {
@@ -25,7 +22,7 @@
                 compatible = "zmk,behavior-hold-tap";
                 #binding-cells = <2>;
                 flavor = "tap-preferred";
-                tapping-term-ms = <400>;
+                tapping-term-ms = <200>;
                 bindings = <&kp>, <&kp>;
             };
         };
