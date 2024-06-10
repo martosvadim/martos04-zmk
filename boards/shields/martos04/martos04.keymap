@@ -27,10 +27,10 @@
 // |		 |    Z    |         |  SPACE  |   TAB   |    lup  | 		|    lup  |   BSPC  |  RETURN |         |    /    |			|
 
             bindings = <
-						&kp W	&kp E		&kp R	&kp T	&kp Y	&kp U		&kp I		&kp O
-    &kp ESC		&kp Q	&kp S	&kp D		&kp F	&kp G	&kp H	&kp J		&kp K		&kp L		&kp P		&kp LBKT
-    &kp SQT		&kp A	&kp X	&kp C		&kp V	&kp B	&kp N	&kp M		&kp COMMA	&kp DOT		&kp SEMI	&kp RBKT
-				&kp Z			&kp SPACE	&kp TAB	&kp B	&kp B	&kp BSPC	&kp RETURN				&kp FSLH
+						    &kp W		&kp E		&kp R	    &kp T				&kp Y	&kp U		&kp I		&kp O
+    &kp ESC		&kp Q	    &kp L_S		&kp L_D		&kp L_F	    &kp G				&kp H	&kp R_J		&kp R_K		&kp R_L		&kp P		&kp LBKT
+    &kp SQT		&kp L_A     &kp X		&kp C		&kp V	    &kp B				&kp N	&kp M		&kp COMMA	&kp DOT		&kp R_SEMI	&kp RBKT
+				&kp Z				    &kp SPACE	&kp TAB     &kp B				&kp B	&kp BSPC	&kp RETURN				&kp FSLH
             >;
         };
     };
