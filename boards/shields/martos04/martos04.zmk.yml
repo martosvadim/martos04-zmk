@@ -2,7 +2,8 @@ file_format: "1"
 id: martos04
 name: MARTOS04
 type: shield
-url: https://github.com/martosvadim/martos04
+url: https://github.com/martosvadim/martos04-zmk.git
 requires: [pro_micro]
 features:
   - keys
+
