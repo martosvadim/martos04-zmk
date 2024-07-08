@@ -1,5 +1,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
 
 #define DEFAULT 0
 #define LOWER   1
@@ -57,8 +58,8 @@
         raise_layer {
             bindings = <
 							&kp F2		&kp F3		&kp F4		&kp F5				&kp F6	&kp F7		&kp F8		&kp F9
-    &kp ESC		&kp F1		&kp LALT	&kp LCTRL	&kp LSHIFT	&none				&none	&kp LEFT	&kp UP		&kp RIGHT	&kp F10			&none
-    &kp DEL 	&kp LC(O)	&kp LC(X) 	&kp LC(C) 	&kp LC(V)	&none				&none	&kp HOME 	&kp DOWN	&kp END 	&kp C_VOL_UP 	&kp PSCRN
+    &kp ESC		&kp F1		&kp LALT	&kp LCTRL	&kp LSHIFT	&bt BT_NXT			&none	&kp LEFT	&kp UP		&kp RIGHT	&kp F10			&bt BT_CLR
+    &kp DEL 	&kp LC(O)	&kp LC(X) 	&kp LC(C) 	&kp LC(V)	&bt BT_PRV			&none	&kp HOME 	&kp DOWN	&kp END 	&kp C_VOL_UP 	&kp PSCRN
 				&kp LC(Z) 				&kp SPACE	&kp TAB		&to 0				&to 1	&kp BSPC	&kp RETURN				&kp C_VOL_DN
             >;
         };
